@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'website_kebumen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'website_kebumen',
-        'USER': 'postgres',
-        'PASSWORD': 'wildan121202.',
-        'HOST': 'localhost',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'ErSvWkaBs09R',
+        'HOST': 'ep-odd-flower-161687-pooler.ap-southeast-1.postgres.vercel-storage.com',
         'PORT': '5432'
     }
 }
