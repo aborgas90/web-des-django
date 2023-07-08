@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from website_kebumen import settings
-from .views import simple_render_semua_destinasi,profile,index,destination,destinationProfile,search
+from .views import simple_render_semua_destinasi, profile, index, destination, destinationProfile, search
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
@@ -26,11 +26,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('destinasi/', simple_render_semua_destinasi),
     path('profile/', views.profile, name='profile'),
-    path('',views.index, name = 'home'),
-    path('destination/',views.destination , name = 'destination'),
-    path('destinationProfile/<int:id>/',views.destinationProfile , name = 'destinationProfile'),
+    path('', views.index, name='home'),
+    path('destination/', views.destination, name='destination'),
+    path('destinationProfile/<int:id>/',
+         views.destinationProfile, name='destinationProfile'),
     path('search/', views.search, name='search')
 ]
 # add at the last
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
